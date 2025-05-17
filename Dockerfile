@@ -30,4 +30,4 @@ RUN chmod +x /usr/local/bin/configure-ssh-user.sh
 EXPOSE 22
 
 # Start SSH server
-CMD ["/usr/local/bin/configure-ssh-use.sh"]
+CMD ["bash /usr/local/bin/configure-ssh-use.sh"]
