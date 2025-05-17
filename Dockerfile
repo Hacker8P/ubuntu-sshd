@@ -25,9 +25,10 @@ RUN apt-get update \
 COPY configure-ssh-user.sh /usr/local/bin/
 COPY configure-ssh-use.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/configure-ssh-user.sh
+RUN chmod +x /usr/local/bin/configure-ssh-use.sh
 
 # Expose SSH port
 EXPOSE 22
 
 # Start SSH server
-CMD ["bash /usr/local/bin/configure-ssh-use.sh"]
+CMD ["/usr/local/bin/configure-ssh-use.sh"]
